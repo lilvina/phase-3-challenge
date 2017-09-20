@@ -1,11 +1,11 @@
-const { itemsSection } = require('../database.js')
+const { itemsInSection } = require('../database.js')
 const print = require('node-print')
 
-const listProductBySection = (section) => {
+const productListBySection = (section) => {
   if(!section) {
     console.warn('Please select a section')
   }
-  itemsSection(section)
+  itemsInSection(section)
     .then(items => {
       print.pt(items)
       process.exit()
@@ -14,6 +14,7 @@ const listProductBySection = (section) => {
       console.log('Section not found')
       process.exit(1)
     })
+
 }
 
-module.exports = listProductBySection
+module.exports = productListBySection

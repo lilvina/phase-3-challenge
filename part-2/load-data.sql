@@ -1,4 +1,4 @@
-COPY grocery_items(name, price, section) FROM './grocery.csv' DELIMITER ',' CSV HEADER;
+\copy grocery_items(name, price, section) FROM '/Users/davinataylor/LGDavina/phase-3-challenge/part-2/grocery.csv' DELIMITER ',' CSV HEADER;
 
 INSERT INTO shoppers(name) VALUES ('Beyonce Knowles');
 INSERT INTO shoppers(name) VALUES ('Rihanna Fenty');
