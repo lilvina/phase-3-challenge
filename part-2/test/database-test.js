@@ -1,10 +1,10 @@
 const { expect } = require('chai')
-const { itemsSection, orderOfTotalPerShopper, shoppersWithOrders } = require('../database.js')
+const { itemsInSection, orderTotalsPerShopper, shoppersWithOrders } = require('../database.js')
 
 describe('Database Queries', () => {
-  context('itemsSection', () => {
-    it('itemsSection("bulk") returns the items "Flour", "Pasta", and "Rice"', () => {
-      return itemsSection('bulk')
+  context('itemsInSection', () => {
+    it('itemsInSection("bulk") returns the items "Flour", "Pasta", and "Rice"', () => {
+      return itemsInSection('bulk')
         .then(data => {
           expect(data).to.eql([{
             "id": 16,
@@ -28,9 +28,9 @@ describe('Database Queries', () => {
     })
   })
 
-  context('orderOfTotalsPerShopper', () => {
-    it('orderOfTotalsPerShopper(3) to return three orders and their totals', () => {
-      return orderOfTotalsPerShopper(3)
+  context('orderTotalsPerShopper', () => {
+    it('orderTotalsPerShopper(3) to return three orders and their totals', () => {
+      return orderTotalsPerShopper(3)
         .then(data => {
           expect(data).to.eql([{
             "order_id": 1,

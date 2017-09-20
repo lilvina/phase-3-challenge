@@ -1,4 +1,4 @@
-const listProductBySection = require('./commands/product-list')
+const productListBySection = require('./commands/product-list')
 const shopperOrders = require('./commands/shopper-orders')
 const realShoppers = require('./commands/real-shoppers')
 
@@ -7,7 +7,7 @@ const argument = process.argv[3]
 
 switch(command) {
   case 'product-list':
-    listProductBySection(argument)
+    productListBySection(argument)
     break;
 
   case 'shopper-orders':

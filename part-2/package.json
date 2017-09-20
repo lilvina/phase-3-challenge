@@ -9,6 +9,7 @@
   "scripts": {
     "create": "createdb grocery_store",
     "schema": "psql grocery_store < schema.sql",
+    "dropdb": "dropdb grocery_store",
     "seed": "psql grocery_store < load-data.sql",
     "test": "mocha"
   },
