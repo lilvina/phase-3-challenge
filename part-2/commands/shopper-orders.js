@@ -3,7 +3,7 @@ const print = require('node-print')
 
 const shopperOrders = (id) => {
   if(!id) {
-    console.warn('Please input an ID')
+    console.warn('Put an ID')
   }
   orderTotalsPerShopper(id)
     .then(totals => {

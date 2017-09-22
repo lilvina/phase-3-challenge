@@ -1,7 +1,7 @@
 const pgp = require('pg-promise')()
 
 const db = pgp({
-  database: 'grocery-store'
+  database: 'grocery_store'
 })
 
 const itemsInSection = (section) => {
