@@ -49,9 +49,9 @@ describe('Database Queries', () => {
   })
 
   context('shoppersWithOrders', () => {
-    it('shoppersWithOrders() returns a list of existing shoppers that have 1 or more orders',
+    it('shoppersWithOrders(5) returns a list of existing shoppers that have 1 or more orders',
       () => {
-        return shoppersWithOrders()
+        return shoppersWithOrders(5)
           .then(data => {
             expect(data).to.eql([
               {
